@@ -1,0 +1,21 @@
+[GitHub 업로드 순서]
+
+1) github.com 로그인
+2) New repository 선택
+3) 저장소 이름 예: word-city-detective
+4) Create repository
+5) 'uploading an existing file' 선택
+6) 이 폴더 안의 파일/폴더 전체 업로드
+7) Commit changes
+8) Settings > Pages
+9) Source를 'GitHub Actions'로 선택
+10) Actions 탭에서 Pages 배포 완료 확인
+
+PC 테스트:
+- PC_TEST_START.bat 더블클릭
+- Python 필요 없음
+- 브라우저가 http://localhost:5500 로 자동 실행
+
+중요:
+- index.html은 저장소 루트에 있어야 합니다.
+- ZIP 자체만 올리지 말고 ZIP을 푼 내용 전체를 업로드하세요.

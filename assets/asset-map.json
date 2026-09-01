@@ -1,0 +1,27 @@
+{
+  "characters": {
+    "judy": "assets/characters/rabbit.png",
+    "nick": "assets/characters/fox.png",
+    "flash": "assets/characters/sloth.png",
+    "clawhauser": "assets/characters/leopard.png",
+    "bellwether": "assets/characters/sheep.png",
+    "bogo": "assets/characters/buffalo.png",
+    "finnick": "assets/characters/fennec.png",
+    "fru": "assets/characters/hippo.png"
+  },
+  "backgrounds": {
+    "cafe": "assets/backgrounds/cafe.png",
+    "station": "assets/backgrounds/station.png",
+    "night": "assets/backgrounds/night.png",
+    "bookstore": "assets/backgrounds/bookstore.png",
+    "academy": "assets/backgrounds/academy.png",
+    "classroom": "assets/backgrounds/classroom.png",
+    "park": "assets/backgrounds/park.png"
+  },
+  "emotions": {
+    "good": "assets/emotions/good.png",
+    "great": "assets/emotions/great.png",
+    "hmm": "assets/emotions/hmm.png",
+    "oops": "assets/emotions/oops.png"
+  }
+}

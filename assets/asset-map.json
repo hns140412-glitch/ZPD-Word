@@ -1,27 +1,9 @@
 {
-  "characters": {
-    "judy": "assets/characters/rabbit.png",
-    "nick": "assets/characters/fox.png",
-    "flash": "assets/characters/sloth.png",
-    "clawhauser": "assets/characters/leopard.png",
-    "bellwether": "assets/characters/sheep.png",
-    "bogo": "assets/characters/buffalo.png",
-    "finnick": "assets/characters/fennec.png",
-    "fru": "assets/characters/hippo.png"
-  },
-  "backgrounds": {
-    "cafe": "assets/backgrounds/cafe.png",
-    "station": "assets/backgrounds/station.png",
-    "night": "assets/backgrounds/night.png",
-    "bookstore": "assets/backgrounds/bookstore.png",
-    "academy": "assets/backgrounds/academy.png",
-    "classroom": "assets/backgrounds/classroom.png",
-    "park": "assets/backgrounds/park.png"
-  },
-  "emotions": {
-    "good": "assets/emotions/good.png",
-    "great": "assets/emotions/great.png",
-    "hmm": "assets/emotions/hmm.png",
-    "oops": "assets/emotions/oops.png"
-  }
+  "visualBaseline": "REV_07 approved fourth pastel high-density nature-city deployment UI",
+  "textPolicy": "All functional/user-facing text is live HTML/CSS/JS DOM. Raster assets are illustration/background/character/icon only.",
+  "masterRevision": "REV_07",
+  "appBuild": "REV_07_VALIDATED_BUILD",
+  "guideExpressions": ["guide_cheer.png","guide_default.png","guide_fever.png","guide_focus.png","guide_hint.png","guide_jump.png","guide_map.png","guide_note.png","guide_play.png","guide_radio.png","guide_smile.png","guide_think.png"],
+  "backgrounds": ["academy.png","bookstore.png","cafe.png","classroom.png","park.png","station.png"],
+  "icons": ["icon-128x128.png","icon-144x144.png","icon-180x180.png","icon-192x192.png","icon-512x512.png","icon-72x72.png","icon-96x96.png"]
 }

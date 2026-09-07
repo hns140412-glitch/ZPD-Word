@@ -7,19 +7,20 @@
   <meta name="color-scheme" content="light">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="ZPD Word">
+  <meta name="apple-mobile-web-app-title" content="Hide & Seek">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./assets/icons/icon-180x180.png">
   <link rel="stylesheet" href="./styles.css">
-  <title>ZPD Word</title>
+  <link rel="stylesheet" href="./hide-runtime.css">
+  <title>Hide & Seek</title>
 </head>
 <body>
   <div id="app" class="app-shell">
     <header class="top-safe">
       <button id="backBtn" class="icon-btn ghost" type="button" aria-label="뒤로 가기" hidden>‹</button>
-      <div class="brand-lockup" aria-label="ZPD Word">
-        <span class="brand-mark">ZPD</span>
-        <span class="brand-copy"><b>ZPD WORD</b><small>Word Detective Team</small></span>
+      <div class="brand-lockup" aria-label="Hide & Seek">
+        <span class="brand-mark">H&S</span>
+        <span class="brand-copy"><b>HIDE & SEEK</b><small>Hidden Word Trail</small></span>
       </div>
       <button id="settingsBtn" class="icon-btn" type="button" aria-label="설정">설정</button>
     </header>
@@ -30,7 +31,7 @@
       <img id="partnerAvatar" src="./assets/characters/guide_default.png" alt="길잡이">
       <div class="partner-copy">
         <b id="partnerName">길잡이</b>
-        <span id="partnerText">새 사건부터 천천히 시작해볼까?</span>
+        <span id="partnerText">숨은 단어부터 천천히 찾아볼까?</span>
       </div>
       <button id="partnerVoiceBtn" class="voice-btn" type="button" aria-label="길잡이 음성 듣기">듣기</button>
     </aside>
@@ -49,8 +50,9 @@
   <input id="profileCameraInput" type="file" accept="image/*" capture="user" hidden>
   <input id="profileLibraryInput" type="file" accept="image/*" hidden>
   <input id="sheetCameraInput" type="file" accept="image/*" capture="environment" hidden>
-  <input id="sheetLibraryInput" type="file" accept="image/*" hidden>
+  <input id="sheetLibraryInput" type="file" accept="image/*" multiple hidden>
   <input id="importDataInput" type="file" accept="application/json,.json" hidden>
   <script src="./app.js"></script>
+  <script src="./hide-runtime.js"></script>
 </body>
 </html>

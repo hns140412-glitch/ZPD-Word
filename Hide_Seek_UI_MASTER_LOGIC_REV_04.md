@@ -1,0 +1,271 @@
+# Hide & Seek UI Master Logic — REV_04
+
+> Status: FORMAL BASELINE / SOURCE OF TRUTH
+> Date: 2026-09-07
+> Supersedes: `Hide_Seek_UI_MASTER_LOGIC_REV_03.md`
+> Product Name: **Hide & Seek**
+> Tagline: **머릿속에 숨어버린 단어 찾기**
+> World Model: **보물찾기 + 술래잡기 + 숨은 단어 탐험**
+
+REV_04 is the active product baseline. Child-facing and active product terminology SHALL use Hide & Seek exploration language only.
+
+Historical product names, detective/police/arrest metaphors and related child-facing concepts are not active product authority.
+
+## 1. PRODUCT ROLE — HARD LOCK
+
+Hide & Seek is the connected island's vocabulary discovery and retrieval specialist.
+
+Child-facing experience:
+`WORD DISCOVERED → WORD HIDES → CLUE → SEEK → FIND → SPEAK/USE → HIDES AGAIN → SEEK AGAIN → STABLE MEMORY`
+
+Core fantasy:
+- words hide like treasure,
+- the learner explores and finds them,
+- the Guide accompanies the learner,
+- missed words hide again and are found again,
+- success means retrieval, not arrest/capture.
+
+Do not expose educational jargon or legacy product names as the primary child-facing concept.
+
+## 2. WORLD / BRAND CONTRACT — HARD LOCK
+
+Active world language:
+- 보물찾기
+- 술래잡기
+- 숨은 단어
+- 단어 탐험
+- 길 / Trail
+- 단서 / Clue
+- 찾기 / Seek
+- 발견 / Find
+- 다시 찾기 / Seek Again
+- 길잡이 / Guide
+
+Possible hiding environments may include forest, beach, cave, ruins, underground spaces, secret boxes, trees, rocks, maps, paths and other original island locations.
+
+Forbidden as active child-facing world language:
+- 경찰
+- 형사
+- 수사
+- 체포
+- 검거
+- 범인
+- 사건
+- 사건 파일
+- 단어 체포
+- police/detective/arrest/case framing
+
+World styling must remain original and must not imitate a copyrighted commercial game world.
+
+## 3. NAME / LINEAGE CONTRACT
+
+The active product name is **Hide & Seek**.
+
+Any prior name may survive only in migration compatibility, repository history or archival evidence. It SHALL NOT appear as the normal installed-app name, primary UI title, onboarding identity, active project card or current master terminology.
+
+`CURRENT PRODUCT NAME = HIDE & SEEK`
+`LEGACY NAME ≠ CURRENT UI`
+`LEGACY NAME ≠ CURRENT MASTER LANGUAGE`
+
+## 4. PRESERVE LEARNING CORE
+
+Preserve reliable source intake and vocabulary learning functions, including:
+- camera/photo vocabulary-list intake,
+- trustworthy word/meaning pairing,
+- review-before-commit for uncertain OCR,
+- bidirectional retrieval,
+- speaking/TTS where supported,
+- repeated recall of missed/weak words,
+- multiple worksheet/list sets and separate/combined statistics where useful.
+
+World changes must not reduce capture/OCR reliability.
+
+## 4.1 SHARED ASSIGNMENT / RAPID CAPTURE INHERITANCE — HARD LOCK
+
+When Hide & Seek renders or calls the shared GUIDE assignment/camera intake, it inherits:
+
+`SHUTTER → IMMEDIATE TEMP SAVE → NEXT SHOT`
+
+`ANALYZE ≠ END CAPTURE`
+`BATCH ANALYZED ≠ SESSION CLOSED`
+
+A targeted retake SHALL preserve unaffected valid photos/results and reprocess only affected evidence where safe.
+
+Hide & Seek continues to own vocabulary-specific OCR/retrieval semantics; it does not absorb MAIN assignment authority.
+
+## 4.2 OCR REVIEW PROVENANCE — HARD LOCK
+
+`OCR DRAFT ≠ CONFIRMED WORD SET`
+
+A low-confidence / `needsReview` item SHALL NOT become confirmed solely because a batch commit action occurred.
+Confirmation requires a valid explicit resolution state such as user correction, user acceptance, or project-approved deterministic evidence.
+
+## 5. SEEKING FLOW — ACTIVE CHILD-FACING MODEL
+
+Preferred child-facing progression:
+
+`FIRST FIND → MEANING CLUE → CONNECTION TRAIL → HIDDEN WORDS → FINAL SEEK → SEEK AGAIN`
+
+Semantics:
+- FIRST FIND = initial word exposure/acquisition
+- MEANING CLUE = bidirectional meaning check
+- CONNECTION TRAIL = word↔meaning association
+- HIDDEN WORDS = weak/missed-word priority practice
+- FINAL SEEK = final spelling retrieval challenge
+- SEEK AGAIN = relearn then re-retrieve unstable words
+
+Internal legacy implementation identifiers may remain temporarily for migration safety, but they are not product terminology.
+
+Examples of migration-only identifiers:
+- `codeRed`
+- `caseMastery`
+- legacy storage keys
+
+`LEGACY INTERNAL KEY ≠ CHILD-FACING COPY`
+`LEGACY INTERNAL KEY ≠ ACTIVE PRODUCT LANGUAGE`
+
+## 6. PROGRESS TERMINOLOGY
+
+Preferred user-facing progress terminology:
+- **Trail Mastery** = current worksheet/list readiness
+- **Memory Strength** = longer-term retention
+
+Do not present police/case terminology as the learner's progress model.
+
+`TRAIL MASTERY ≠ MEMORY STRENGTH`
+
+## 7. CONNECTED SESSION CONTRACT
+
+When called from Ready & Set:
+- inherit `session_id / goal_id / task_id / lap_id / return_target`,
+- app switch does not pause/reset the shared timer,
+- app switch does not end the current Lap,
+- Hide & Seek owns vocabulary-task results only,
+- return `COMPLETED / PARTIAL / BLOCKED / HELP_NEEDED` as task-level state,
+- never close the full Ready & Set session.
+
+## 8. SNAP & POP HANDOFF
+
+A found word may become expression material for Snap & Pop.
+
+Example:
+`FIND WORD → SPEAK WORD → SEND WORD/CONTEXT TO SNAP & POP → CHILD MAKES SENTENCE OR SPEAKS → RESULT RETURNS TO SHARED LEARNING HISTORY`
+
+Do not create a duplicate independent long-term vocabulary registry inside Snap & Pop.
+
+## 9. GUIDE
+
+Use the shared Guide persona and connection concept.
+
+Guide may give a minimal clue or short support, but must not reveal every answer immediately.
+
+Clue use is a learning event, not a punishment.
+
+Preferred Guide voice:
+- 탐험 친구
+- 길잡이
+- 단서를 건네는 동료
+
+Do not use police/detective-partner framing.
+
+## 10. IMAGINATION CLOUD
+
+Hide & Seek may call the shared Imagination Cloud when a word's meaning, context or image association would materially help retrieval.
+
+Rules:
+- child question may trigger it,
+- visual/context support must explain rather than decorate,
+- do not replace retrieval effort with answer display,
+- preserve session/task/lap,
+- return to the same vocabulary task.
+
+## 11. REWARD IDENTITY
+
+Hide & Seek may use found-word, hidden-word, treasure-map, trail, clue or treasure-style collection feedback.
+
+Do not copy Snap & Pop's gem/wish/blessing economy wholesale.
+Do not make reward accumulation more important than actual retrieval.
+
+Historical/runtime reward mechanics such as XP, streak, level, calendar, themes, best record or achievements SHALL NOT be silently promoted to protected Hide & Seek identity or silently removed while current product authority remains unresolved.
+
+## 12. DEVICE / RESPONSIVE CONTRACT — HARD LOCK
+
+Phone:
+- Portrait Only.
+
+Tablet:
+- Portrait + Landscape.
+
+Tablet UI Scale Ceiling:
+- landscape usable height.
+
+Additional tablet width should expand World / Environment before inflating the core UI into an oversized phone-like surface.
+
+`TEXT IS NEVER BAKED INTO IMAGE`
+`BACKGROUND ≠ UI`
+`SYSTEM FACT ≠ GUIDE VOICE`
+
+Unintended overlap, excessive separation, clipping, broken alignment/anchoring or alternate-orientation composition failure = FAIL.
+
+## 13. PWA SAFE AUTO-UPDATE — HARD LOCK
+
+Inherit shared update strategy:
+`GITHUB PUSH → HOST AUTO DEPLOY → AUTO VERSION DETECT → PREPARE UPDATE → APPLY AT SAFE POINT`
+
+Never force reload during an active shared session or active vocabulary attempt.
+Persist current sheet/list, word position, task/lap/session identifiers and committed results before activation.
+
+## 14. APP NAME / ICON RELEASE GATE
+
+Installed product identity SHALL be Hide & Seek.
+
+At UI freeze:
+- create an original ultra-high-density illustration master icon,
+- derive required PWA/Apple touch icon sizes,
+- update manifest `name`, `short_name`, icons and relevant title metadata,
+- test Safari + iPhone Home Screen installation/update behavior,
+- verify no legacy product naming or detective/police/arrest world language remains in the approved release.
+
+## 15. MIGRATION / COMPATIBILITY
+
+Do not break existing learner data solely to rename the product/world.
+
+Allowed temporarily:
+- legacy localStorage/IndexedDB key names,
+- legacy internal state-property names,
+- migration code that recognizes older versions.
+
+These identifiers must be documented as compatibility-only and must not leak into ordinary UI copy.
+
+When safe migration is implemented:
+`READ LEGACY → NORMALIZE → WRITE CURRENT → VERIFY → RETAIN FALLBACK WINDOW → RETIRE LEGACY`
+
+## 16. REGRESSION FAIL CONDITIONS
+
+FAIL if:
+- legacy product name appears as current child-facing brand,
+- police/detective/arrest/case framing appears as active child-facing world language,
+- old world terms are reintroduced by fallback/runtime normalization,
+- OCR/capture safety is weakened for visual novelty,
+- a low-confidence OCR item is silently promoted to confirmed without a valid resolution state,
+- rapid shared capture inserts per-shot blocking confirmation/classification,
+- analysis is treated as automatic capture-session termination,
+- phone/tablet orientation behavior contradicts the device contract,
+- app switch resets timer/session/lap,
+- Hide & Seek completes the whole multi-task session,
+- clues reveal answers by default,
+- Imagination Cloud bypasses retrieval,
+- vocabulary results become isolated from shared Learning History,
+- app update interrupts active learning.
+
+## 17. LATER TAKY PROMOTION NOTE
+
+When the user explicitly authorizes central TAKY application, promote this project correction as:
+
+`ZPD WORD CHILD-FACING IDENTITY → SUPERSEDED`
+`POLICE / DETECTIVE / ARREST WORD WORLD → SUPERSEDED`
+`HIDE & SEEK + TREASURE SEEK / TAG / HIDDEN WORD EXPLORATION → ACTIVE`
+
+Do not infer central TAKY write authorization from this project-master update alone.
+
+END — HIDE & SEEK UI MASTER LOGIC REV_04

@@ -1,23 +1,37 @@
-# Self-Verification · v3
+# Self-Verification · Hide & Seek world migration
 
-## 1. 기록 마커 / 산술 방어
-- limitTime <= 0 또는 NaN이면 60초로 복구.
-- 최고기록이 0 이하 또는 제한시간 이상이면 제한시간의 70%를 표준 목표로 사용.
-- 마커는 `(limit-best)/limit` 비율을 0~1로 clamp하여 게이지 폭에 비례 배치.
+## 1. 세계관 기준
+- 현재 제품명은 **Hide & Seek**.
+- 현재 세계관은 **보물찾기 + 술래잡기 + 숨은 단어 탐험**.
+- 경찰/형사/수사/체포/검거/사건/사건파일 표현은 현재 사용자 경험에서 FAIL.
+- 과거 명칭은 데이터 마이그레이션/저장키 호환에만 허용.
 
-## 2. 타이머 / 코드 레드
-- requestAnimationFrame 단일 루프 사용.
-- 타일 화면 이탈, 재배치, 배치 완료 시 cancelAnimationFrame으로 정리.
-- 최고기록 페이스를 넘기면 yellow warning, 잔여 20% 이하이면 CODE RED 점멸.
-- 제한시간 종료 시 게임 상태 초기화 후 같은 배치를 재도전 가능.
+## 2. 학습 기능 보존
+- 시험지 촬영, OCR, Review-before-Commit, 단어/뜻 학습, 취약 단어 반복, 최종 철자 검증 기능은 세계관 교체와 무관하게 보존.
+- 시각적 세계관 변경이 OCR 정확도나 저장 안정성을 낮추면 FAIL.
 
-## 3. 기록 저장
-- 타일 수별(best by batch size) 최고 기록을 localStorage state에 저장.
-- 비정상 기록은 UI 계산에 직접 사용하지 않음.
+## 3. 촬영 흐름
+- `SHUTTER → IMMEDIATE TEMP SAVE → NEXT SHOT`
+- 분석은 촬영 종료가 아님.
+- 특정 장 재촬영은 정상 장을 보존하고 해당 장만 재처리.
 
-## 4. 기존 학습 데이터와 충돌 방지
-- 시험지/오답/캘린더/XP 구조는 유지.
-- 새 필드는 matchBestBySize, matchLimitSeconds, matchCodeRed이며 구버전 저장값에도 기본값 적용.
+## 4. 사용자 노출 용어
+권장 흐름:
+`FIRST FIND → MEANING CLUE → CONNECTION TRAIL → HIDDEN WORDS → FINAL SEEK → SEEK AGAIN`
 
-## 5. UI
-- 특정 영화의 로고/고유 캐릭터를 복제하지 않고 동물도시 경찰 수사대, 배지, 사건파일, 도시 야경, 사이렌의 분위기로 재구성.
+진행 지표:
+- Trail Mastery
+- Memory Strength
+
+## 5. 내부 호환
+기존 `codeRed`, `caseMastery`, `zpd_word_state` 등은 마이그레이션 안전을 위해 내부에서 일시 유지 가능.
+이 값이 UI 문구나 현재 제품명으로 노출되면 FAIL.
+
+## 6. 배포 검증
+배포 후 실제 모바일에서 다음을 확인:
+- Hide & Seek 명칭
+- 옛 경찰/수사 세계관 문구 미노출
+- 카메라/앨범
+- OCR
+- PWA 설치/오프라인/업데이트
+- 터치 학습 흐름

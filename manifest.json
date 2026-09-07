@@ -1,7 +1,7 @@
 {
-  "name": "Hide & Seek - 숨은 단어 탐험",
+  "name": "Hide & Seek",
   "short_name": "Hide & Seek",
-  "description": "시험지 사진에서 숨은 단어를 찾고 길잡이와 함께 단서를 따라 학습한 뒤 FINAL SEEK와 SEEK AGAIN으로 기억을 확인하는 개인용 영어 단어 PWA.",
+  "description": "머릿속에 숨어버린 단어 찾기",
   "id": "./",
   "start_url": "./",
   "scope": "./",

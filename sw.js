@@ -1,6 +1,6 @@
-const CACHE="zpd-word-rev07-v1";
+const CACHE="zpd-word-rev07-hide-runtime-v1";
 const CORE=[
-  "./","./index.html","./styles.css","./app.js","./manifest.json","./assets/asset-map.json",
+  "./","./index.html","./styles.css","./hide_runtime_rev00.css","./app.js","./hide_runtime_rev00.js","./manifest.json","./assets/asset-map.json",
   "./assets/icons/icon-180x180.png","./assets/icons/icon-192x192.png","./assets/icons/icon-512x512.png",
   "./assets/backgrounds/academy.png","./assets/backgrounds/park.png","./assets/backgrounds/bookstore.png","./assets/backgrounds/cafe.png","./assets/backgrounds/classroom.png","./assets/backgrounds/station.png",
   "./assets/characters/guide_default.png","./assets/characters/guide_smile.png","./assets/characters/guide_hint.png","./assets/characters/guide_note.png","./assets/characters/guide_radio.png","./assets/characters/guide_fever.png","./assets/characters/guide_focus.png","./assets/characters/guide_cheer.png","./assets/characters/rabbit.png","./assets/characters/fennec.png","./assets/characters/sloth.png",

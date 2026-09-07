@@ -7,14 +7,16 @@
     [/ZPD Word/g, 'Hide & Seek'],
     [/Word Detective Team/g, 'Hidden Word Trail'],
     [/ACTIVE CASE/g, 'ACTIVE TRAIL'],
+    [/시험지 · 사건 파일/g, '시험지 · 단어 탐험'],
+    [/사건 파일 작성 완료/g, '단어 탐험 준비 완료'],
     [/사건 파일/g, '단어 탐험'],
     [/오늘의 수사 상태/g, '오늘의 탐험 상태'],
     [/나의 수사 동료/g, '나의 탐험 친구'],
     [/수사 동료/g, '탐험 친구'],
     [/수사 가능/g, '탐험 가능'],
-    [/수사/g, '탐험'],
-    [/단서/g, '단어 흔적'],
-    [/사건/g, '탐험']
+    [/새 사건부터 천천히 시작해볼까\?/g, '숨은 단어부터 천천히 찾아볼까?'],
+    [/지난 사건의 기록/g, '지난 탐험의 기록'],
+    [/완료한 사건은 완료 상태 그대로야/g, '완료한 탐험은 완료 상태 그대로야']
   ];
 
   let cameraStream = null;
@@ -650,6 +652,17 @@ ${JSON.stringify(see)}`;
       document.body.appendChild(chip);
     }
   }
+
+  window.HideCaptureRuntime = Object.freeze({
+    version: HIDE_RUNTIME_VERSION,
+    openRapidCamera,
+    renderCaptureHub,
+    analyzeDirtyPages,
+    currentSession: () => {
+      const session = currentSession();
+      return session ? JSON.parse(JSON.stringify(session)) : null;
+    }
+  });
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootHideRuntime, { once: true });
   else bootHideRuntime();

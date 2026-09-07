@@ -194,11 +194,11 @@
         </div>
       </section>`;
 
-    $('#captureMoreCamera').onclick=()=>{const input=$('#sheetCameraInput');input.value='';input.click()};
-    $('#captureMoreLibrary').onclick=()=>{const input=$('#sheetLibraryInput');input.value='';input.click()};
+    $('#captureMoreCamera').onclick=()=>{pendingRetakePageId=null;const input=$('#sheetCameraInput');input.value='';input.click()};
+    $('#captureMoreLibrary').onclick=()=>{pendingRetakePageId=null;const input=$('#sheetLibraryInput');input.value='';input.click()};
     $('#analyzeCaptureBatch').onclick=analyzeCaptureBatch;
     $('#reviewExisting')?.addEventListener('click',renderCaptureReview);
-    $('#captureExit').onclick=()=>{currentTab='sheets';viewStack=[];render()};
+    $('#captureExit').onclick=()=>{pendingRetakePageId=null;currentTab='sheets';viewStack=[];render()};
     $$('[data-retake]').forEach(b=>b.onclick=()=>requestRetake(b.dataset.retake));
     $$('[data-delete]').forEach(b=>b.onclick=()=>deletePage(b.dataset.delete));
 
@@ -363,7 +363,7 @@
     });
     $$('[data-review-retake]').forEach(b=>b.onclick=()=>requestRetake(b.dataset.reviewRetake));
     $('#analyzePending')?.addEventListener('click',analyzeCaptureBatch);
-    $('#continueCapture').onclick=()=>{c.status='CAPTURING';save();renderCaptureSession()};
+    $('#continueCapture').onclick=()=>{pendingRetakePageId=null;c.status='CAPTURING';save();renderCaptureSession()};
     $('#commitCaptureSheet').onclick=commitCaptureSheet;
     setPartner(unresolved?'애매한 것만 네 확인이 필요해. 확실한 건 그대로 둘게.':'정리 끝. 더 찍어도 되고, 이대로 단어 세트를 만들어도 돼.','note');
   }
@@ -408,7 +408,8 @@
       committedAt:nowISO(),
       committedSheetId:newId,
       pageCount:c.pages.length,
-      analysisBatchIds:c.analysisBatches.map(b=>b.batchId)
+      analysisBatchIds:c.analysisBatches.map(b=>b.batchId),
+      pageRefs:c.pages.map(p=>({pageId:p.pageId,displayOrder:p.displayOrder,version:p.version,blobKey:captureBlobKey(c.captureSessionId,p.pageId)}))
     }].slice(-20);
     S.captureSession=null;
     S.learning=clone(DEFAULT_STATE.learning);

@@ -46,7 +46,7 @@
   }
 
   function eventTypeForStatus(status) {
-    if (status === 'COMPLETED' || status === 'TEST_READY') return 'TASK_COMPLETED';
+    if (status === 'COMPLETED') return 'TASK_COMPLETED';
     if (status === 'BLOCKED') return 'TASK_BLOCKED';
     if (status === 'HELP_NEEDED') return 'HELP_NEEDED';
     if (status === 'LEARNING') return 'TASK_STARTED';
@@ -63,6 +63,18 @@
       validWordCount: (() => { try { return validWords().length; } catch { return 0; } })(),
       captureActive: !!(S.hideSeekCaptureSession && S.hideSeekCaptureSession.status === 'CAPTURING')
     };
+  }
+
+  function targetOrigin() {
+    const context = getContext();
+    for (const candidate of [context.return_target, context.snap_target]) {
+      if (!candidate) continue;
+      try {
+        const url = new URL(candidate, location.href);
+        if (['http:', 'https:'].includes(url.protocol)) return url.origin;
+      } catch {}
+    }
+    return location.origin;
   }
 
   function emit(type, payload = {}) {
@@ -87,10 +99,10 @@
       window.dispatchEvent(new CustomEvent('taky-learning-event', { detail: event }));
     } catch {}
     try {
-      if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'TAKY_LEARNING_EVENT', event }, '*');
+      if (window.opener && !window.opener.closed) window.opener.postMessage({ type: 'TAKY_LEARNING_EVENT', event }, targetOrigin());
     } catch {}
     try {
-      if (window.parent && window.parent !== window) window.parent.postMessage({ type: 'TAKY_LEARNING_EVENT', event }, '*');
+      if (window.parent && window.parent !== window) window.parent.postMessage({ type: 'TAKY_LEARNING_EVENT', event }, targetOrigin());
     } catch {}
     return event;
   }
@@ -100,6 +112,7 @@
     if (!context.return_target) return null;
     try {
       const url = new URL(context.return_target, location.href);
+      if (!['http:', 'https:'].includes(url.protocol)) return null;
       if (context.session_id) url.searchParams.set('session_id', context.session_id);
       if (context.goal_id) url.searchParams.set('goal_id', context.goal_id);
       if (context.task_id) url.searchParams.set('task_id', context.task_id);
@@ -135,6 +148,7 @@
     if (!context.snap_target) return event;
     try {
       const url = new URL(context.snap_target, location.href);
+      if (!['http:', 'https:'].includes(url.protocol)) return event;
       if (context.session_id) url.searchParams.set('session_id', context.session_id);
       if (context.task_id) url.searchParams.set('task_id', context.task_id);
       if (context.lap_id) url.searchParams.set('lap_id', context.lap_id);
@@ -178,7 +192,10 @@
       chip.type = 'button';
       chip.textContent = '촬영 이어가기';
       chip.onclick = () => {
-        if (typeof renderCaptureHub === 'function') renderCaptureHub();
+        currentTab = 'home';
+        viewStack = [];
+        render();
+        setTimeout(() => document.querySelector('#photoFirst')?.click(), 0);
       };
       document.body.appendChild(chip);
     }

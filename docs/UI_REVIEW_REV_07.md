@@ -1,38 +1,42 @@
-# ZPD Word Deployment UI Review — REV_07
+# Hide & Seek Deployment UI Review — REV_08 WORLD MIGRATION
 
-Status: DEPLOYMENT UI BASELINE — PASS FOR BUILD
-Master: `## ZPD Word Ui Master Logic REV_07##.md`
-Visual reference: approved fourth concept board `a_wide_promotional_collage_image_for_a_mobile_pwa.png`
+Status: DEPLOYMENT UI BASELINE — CURRENT
+Master: `Hide_Seek_UI_MASTER_LOGIC_REV_04.md`
 
 ## Review conclusion
 
-The fourth concept is treated as the visual baseline, not as a bitmap screen to ship. The runtime UI uses raster artwork only for background, character, and decorative illustration. All functional copy, word spelling, buttons, choices, progress, CODE RED Letter Keys, Blank Slots, and gauges are live HTML/CSS/JS.
+The active visual baseline is an original treasure-seek / hide-and-seek / hidden-word exploration world. Runtime UI uses raster artwork only for background, character and decorative illustration. Functional copy, word spelling, buttons, choices, progress, Letter Keys, Blank Slots and gauges remain live HTML/CSS/JS.
 
-## Corrections from the previous deployment build
+## Required corrections
 
-- Home priority changed to **사진으로 시험지 만들기** as the strongest primary CTA.
-- User profile and Guide companion are visually separated: USER is protagonist; GUIDE is companion.
-- Full learning path restored: FIRST CONTACT → MEANING CHECK → CONNECTION → WEAK WORD → CODE RED → RETRACE.
-- CODE RED is visually enforced as partial spelling + Blank Slots + mixed Letter Key Tray, with Drag & Drop and Tap fallback.
+- Product identity is **Hide & Seek**.
+- Home priority remains **사진으로 시험지 만들기**.
+- USER is protagonist; GUIDE is companion/exploration friend.
+- Current learning path is `FIRST FIND → MEANING CLUE → CONNECTION TRAIL → HIDDEN WORDS → FINAL SEEK → SEEK AGAIN`.
+- Final spelling retrieval keeps partial spelling + Blank Slots + mixed Letter Key Tray, with Drag & Drop and Tap fallback.
 - Wrong Letter Key is rejected immediately and does not occupy a slot.
-- Pulse Time Gauge is visually distinct from Flow/Fever progress.
-- Guide remains secondary to the current learning task and never intentionally covers question/CTA/Key/Slot areas.
-- UI palette is softened toward pastel Leaf Green / Mint / Sky with nature-city depth; Police Red/Blue are state accents rather than default background colors.
-- Repetitive cream/white stacked-card treatment was reduced through world hero, tinted materials, spatial sections, and illustrated context.
-- Mobile safe areas and bottom navigation are preserved.
+- Guide remains secondary to the learning task and never covers question/CTA/Key/Slot areas.
+- World palette should support forest/trail/treasure/island exploration rather than police-state visual coding.
 - Functional text is never dependent on generated-image typography.
 
-## Visual regression gate
+## World regression gate
 
-PASS criteria applied:
+FAIL if the current approved UI shows or normalizes back to:
+- ZPD Word as the current product title,
+- police/detective/arrest framing,
+- 수사 / 사건 / 사건 파일 / 체포 / 검거 / 범인 terminology,
+- police badge/siren/case-file identity as the dominant experience.
 
-- Bright original animal-city investigation world.
-- No commercial character names/logos in runtime copy.
+## Visual pass criteria
+
+- Bright, original hidden-word exploration world.
+- Treasure, trail, map, clue and seek metaphors may be used.
+- No commercial character names/logos.
 - Task > learning information > progress > guide > decoration hierarchy.
-- Photo-first home entry remains visually dominant.
-- CODE RED does not regress to key/lock choice or multiple-choice UI.
-- 320px width does not introduce horizontal page overflow in the Chromium smoke test.
+- Photo-first home entry remains dominant.
+- Final spelling retrieval remains functionally clear.
+- Narrow mobile widths do not introduce horizontal page overflow.
 
 ## Known limitation
 
-The user-photo avatar in this static PWA is a local privacy-preserving Canvas stylization, not a full server-side generative 2.5D redraw. This is intentionally kept optional and does not block test-sheet creation or learning.
+The user-photo avatar in this static PWA is a local privacy-preserving Canvas stylization, not a server-side generative redraw. This is optional and does not block worksheet creation or learning.

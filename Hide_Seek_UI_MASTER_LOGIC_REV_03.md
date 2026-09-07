@@ -39,6 +39,26 @@ Preserve reliable source intake and vocabulary learning functions, including:
 
 Visual metaphor changes must not reduce capture/OCR reliability.
 
+## 3.1 SHARED ASSIGNMENT / RAPID CAPTURE INHERITANCE — HARD LOCK
+
+When Hide & Seek renders or calls the shared GUIDE assignment/camera intake, it inherits the shared capture meaning from `TAKY/OS/GUIDE_FAMILY_LEARNING_OS.md`:
+
+`SHUTTER → IMMEDIATE TEMP SAVE → NEXT SHOT`
+
+`ANALYZE ≠ END CAPTURE`
+`BATCH ANALYZED ≠ SESSION CLOSED`
+
+A targeted retake SHALL preserve unaffected valid photos/results and reprocess only affected evidence where safe.
+
+Hide & Seek continues to own vocabulary-specific OCR/retrieval semantics; it does not absorb MAIN assignment authority.
+
+## 3.2 OCR REVIEW PROVENANCE — HARD LOCK
+
+`OCR DRAFT ≠ CONFIRMED WORD SET`
+
+A low-confidence / `needsReview` item SHALL NOT become confirmed solely because a batch commit action occurred.
+Confirmation requires a valid explicit resolution state such as user correction, user acceptance, or project-approved deterministic evidence.
+
 ## 4. CONNECTED SESSION CONTRACT
 
 When called from Ready & Set:
@@ -84,7 +104,28 @@ Hide & Seek may use its own found-word/hidden-word/treasure-style collection fee
 Do not copy Snap & Pop's gem/wish/blessing economy wholesale.
 Do not make reward accumulation more important than actual retrieval.
 
-## 9. PWA SAFE AUTO-UPDATE — HARD LOCK
+Historical/runtime reward mechanics such as XP, streak, level, calendar, themes, best record or achievements SHALL NOT be silently promoted to protected Hide & Seek identity or silently removed while current product authority remains unresolved.
+
+## 9. DEVICE / RESPONSIVE CONTRACT — HARD LOCK
+
+Phone:
+- Portrait Only.
+
+Tablet:
+- Portrait + Landscape.
+
+Tablet UI Scale Ceiling:
+- landscape usable height.
+
+Additional tablet width should expand World / Environment before inflating the core UI into an oversized phone-like surface.
+
+`TEXT IS NEVER BAKED INTO IMAGE`
+`BACKGROUND ≠ UI`
+`SYSTEM FACT ≠ GUIDE VOICE`
+
+Unintended overlap, excessive separation, clipping, broken alignment/anchoring or alternate-orientation composition failure = FAIL.
+
+## 10. PWA SAFE AUTO-UPDATE — HARD LOCK
 
 Inherit shared update strategy:
 `GITHUB PUSH → HOST AUTO DEPLOY → AUTO VERSION DETECT → PREPARE UPDATE → APPLY AT SAFE POINT`
@@ -92,7 +133,7 @@ Inherit shared update strategy:
 Never force reload during an active shared session or active vocabulary attempt.
 Persist current sheet/list, word position, task/lap/session identifiers and committed results before activation.
 
-## 10. APP NAME / ICON RELEASE GATE
+## 11. APP NAME / ICON RELEASE GATE
 
 Master product name is now **Hide & Seek**, but installed-app manifest/name/icon changes should be released together after the new UI/visual direction is approved.
 
@@ -103,11 +144,15 @@ At UI freeze:
 - test Safari + iPhone Home Screen installation/update behavior,
 - verify no stale ZPD Word/police branding remains in the approved release.
 
-## 11. REGRESSION FAIL CONDITIONS
+## 12. REGRESSION FAIL CONDITIONS
 
 FAIL if:
 - old police/capture concept remains dominant in final approved child UI,
 - OCR/capture safety is weakened for visual novelty,
+- a low-confidence OCR item is silently promoted to confirmed without a valid resolution state,
+- rapid shared capture inserts per-shot blocking confirmation/classification,
+- analysis is treated as automatic capture-session termination,
+- phone/tablet orientation behavior contradicts the device contract,
 - app switch resets timer/session/lap,
 - Hide & Seek completes the whole multi-task session,
 - clues reveal answers by default,

@@ -1,9 +1,9 @@
 (() => {
   'use strict';
 
-  const BRIDGE_VERSION = '2026.09.07-a';
+  const BRIDGE_VERSION = '2026.09.10-b';
   const EVENT_LIMIT = 120;
-  const SHARED_PARAM_NAMES = ['session_id', 'goal_id', 'task_id', 'lap_id', 'return_target', 'snap_target', 'child_id'];
+  const SHARED_PARAM_NAMES = ['session_id', 'goal_id', 'task_id', 'lap_id', 'return_target', 'snap_target', 'child_id', 'target_time_ms', 'session_start_at', 'paused_at', 'issue_ms'];
   const legacyTerms = [
     [/ZPD WORD/g, 'HIDE & SEEK'],
     [/ZPD Word/g, 'Hide & Seek'],
@@ -149,9 +149,9 @@
     try {
       const url = new URL(context.snap_target, location.href);
       if (!['http:', 'https:'].includes(url.protocol)) return event;
-      if (context.session_id) url.searchParams.set('session_id', context.session_id);
-      if (context.task_id) url.searchParams.set('task_id', context.task_id);
-      if (context.lap_id) url.searchParams.set('lap_id', context.lap_id);
+      ['session_id','goal_id','task_id','lap_id','return_target','child_id','target_time_ms','session_start_at','paused_at','issue_ms'].forEach(key => {
+        if (context[key]) url.searchParams.set(key, context[key]);
+      });
       url.searchParams.set('from_app', 'hide-seek');
       url.searchParams.set('word', event.payload.word);
       if (event.payload.context) url.searchParams.set('word_context', event.payload.context);

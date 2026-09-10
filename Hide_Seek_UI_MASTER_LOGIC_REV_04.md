@@ -80,6 +80,27 @@ Preserve reliable source intake and vocabulary learning functions, including:
 
 World changes must not reduce capture/OCR reliability.
 
+### 4.0 LEARNING LINEAGE TRACE — HARD LOCK
+
+Historical ZPD-era terminology/world framing is SUPERSEDED, but validated learning semantics are not deleted merely because their old names disappear.
+
+The following learning lineage remains protected at semantic level when supported by actual implementation/evidence:
+- trustworthy word↔meaning pairing,
+- recognition vs unaided recall distinction,
+- weak/missed-word prioritization,
+- relearn → recall-again behavior,
+- cumulative word/sense memory,
+- worksheet/list-level readiness vs longer-term memory strength,
+- interrupt/resume continuity.
+
+Legacy internal identifiers such as `codeRed`, `caseMastery`, older storage keys or old label names may remain temporarily for migration compatibility only.
+
+`LEGACY IDENTIFIER ≠ LEGACY CHILD-FACING WORLD`
+`OLD LABEL REMOVED ≠ LEARNING SEMANTIC DELETED`
+`HISTORICAL DETAIL ≠ AUTOMATIC CURRENT AUTHORITY`
+
+If a historical rule is needed to explain current behavior, trace it to the active Hide/Family Learning owner and current runtime evidence before treating it as preserved. Do not revive police/case/arrest framing during lineage recovery.
+
 ## 4.1 SHARED ASSIGNMENT / RAPID CAPTURE INHERITANCE — HARD LOCK
 
 When Hide & Seek renders or calls the shared GUIDE assignment/camera intake, it inherits:
@@ -206,6 +227,26 @@ Additional tablet width should expand World / Environment before inflating the c
 `SYSTEM FACT ≠ GUIDE VOICE`
 
 Unintended overlap, excessive separation, clipping, broken alignment/anchoring or alternate-orientation composition failure = FAIL.
+
+### 12.1 DEVICE RUNTIME VALIDATION BOUNDARY — HARD LOCK
+
+The MASTER device contract is normative, but manifest metadata alone does not prove runtime realization.
+
+Current PWA packaging may use a permissive manifest orientation value for compatibility. This SHALL NOT be interpreted as device-contract PASS or automatic contradiction resolution.
+
+Before DEVICE / RELEASE PASS, validate the actual combined behavior of:
+- manifest/app-shell metadata,
+- CSS responsive/orientation behavior,
+- JS/device-state behavior where present,
+- phone portrait handling,
+- tablet portrait handling,
+- tablet landscape composition,
+- installed Safari/PWA behavior on representative real devices.
+
+If actual phone behavior permits an unsupported landscape experience or tablet landscape violates the scale/composition contract, classify the affected runtime as `RE-TEST / UPDATE-REQUIRED / FAIL` as applicable.
+
+`MANIFEST VALUE ≠ DEVICE CONTRACT PASS`
+`STATIC PACKAGE ≠ REAL-DEVICE PASS`
 
 ## 13. PWA SAFE AUTO-UPDATE — HARD LOCK
 
